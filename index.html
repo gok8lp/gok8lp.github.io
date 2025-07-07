@@ -1,16 +1,179 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gokalp Goksu</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Gökalp Göksu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #444444);
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .left p.subtitle {
+      font-weight: bold;
+      color: #ff6666;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    .left .buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 20px;
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .left .buttons a:hover {
+      background: white;
+      color: black;
+    }
+
+    .left .desc {
+      margin-top: 40px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .right {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      color: black;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .right h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #cc0000;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #ddd;
+      border-radius: 5px;
+    }
+
+    .form-group input[type="checkbox"] {
+      width: auto;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: black;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-family: monospace;
+    }
+
+    .submit-btn:hover {
+      background: #333;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 40px;
+      }
+
+      .left h1 {
+        font-size: 45px;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>Gokalp Goksu</h1>
-    <p>Götümü siken yok muuuuuu? 💻<br>PORNOOOO ÇOK ÖNEMLİİİ</p>
-    <a href="mailto:seninmailin@gmail.com" class="button">İletişime Geç</a>
+    <div class="left">
+      <h1>Welcome</h1>
+      <p class="subtitle">GÖKALP GÖKSU DIGITAL SPACE</p>
+      <div class="buttons">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="desc">
+        As an <b>engineering student</b> at Gazi University,<br>
+        I'm passionate about front-end development and working<br>
+        to improve my skills to become a real engineer.
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>I only reply to important issues</h2>
+      <form>
+        <div class="form-group">
+          <label>Name (required)</label>
+          <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+          <label>Email (required)</label>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="checkbox"> Sign up for news and updates
+        </div>
+        <div class="form-group">
+          <label>Subject (required)</label>
+          <input type="text" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <label>Message (required)</label>
+          <textarea rows="4" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
   </div>
+
 </body>
 </html>
